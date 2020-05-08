@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EshoShikhi</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../css/all.css">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="../css/Style.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+            margin-bottom: 16px;
+            padding: 0 16px;
+        }
+
+        .main-body {
+            margin: 2rem;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+        }
+
+        .contain {
+            text-align: center;
+        }
+
+        .contain::after,
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .title {
+            color: grey;
+        }
+
+
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body onload="myLoad()">
+
+    <div class="preloader" id="loader">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </div>
+
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray">EshoShikhi<span class="small-text">.com</span></a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+
+                    <a href="../index.html">
+                        <li class="nav-link">
+                            <i class="fa fa-fw fa-home"></i> &nbsp; Home &nbsp;
+                        </li>
+                    </a>
+                    <a href="blog-type.html">
+                        <li class="nav-link">
+                            <i class="fas fa-book"></i>
+                            &nbsp; Blog &nbsp;
+                        </li>
+                    </a>
+                    <a href="quotes-type.html">
+                        <li class="nav-link">
+                            <i class="fas fa-quote-right"></i>
+                            &nbsp; Quotes &nbsp;
+                        </li>
+                    </a>
+                    <a href="photo-type.html">
+                        <li class="nav-link">
+                            <i class="far fa-image"></i>
+                            &nbsp; Photos &nbsp;
+                        </li>
+                    </a>
+                    <a href="members-type.html">
+                        <li class="nav-link root-link">
+                            <i class="fas fa-users"></i>&nbsp; Members
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a target="_blank" href="https://twitter.com/explore"><i class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://www.instagram.com/accounts/login/?"><i class="fab fa-instagram"></i></a>
+                <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+    <hr style="margin-top:-1.2px;" />
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+    <!----------------------------- Main Site Section ------------------------------>
+    <section class="main-body">
+        <h1 style="text-align:center;color: var(--midnight)">Team Members</h1>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="../assets/members/mem-pic.jpg" alt="Jane" style="width:100%">
+                    <div class="contain">
+                        <h3>Mehedi Hassan (Mubin)</h3>
+                        <p>mehedi7310@gmail.com</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="../assets/members/jui-pic.jpg" alt="Jane" style="width:100%">
+                    <div class="contain">
+                        <h3>Samira Akter Jui</h3>
+                        <p>samirajui@gmail.com</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="../assets/members/rat-pic.jpg" alt="Mike" style="width:100%">
+                    <div class="contain">
+                        <h3>Mahmudul Hasan Rahat</h3>
+
+                        <p>rahatm269@gmail.com</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="../assets/members/tamma-pic.jpg" alt="John" style="width:100%">
+                    <div class="contain">
+                        <h3>Tamanna Mim</h3>
+
+                        <p>tamannamim336@gmail.com</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <hr />
+    <p class="comment-footer"> আপনার মূল্যবান মতামত অথবা উপদেশ জানাতে মেইল করুন: <span id="blue-text">mehedi7310@gmail.com</span></p>
+    <!-- -----------x---------- Site Content -------------x----------
+
+   
+
+    <!---------------x------------- Main Site Section ---------------x-------------->
+
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>ডিসক্লেইমার</h2>
+                <p class="footer-disclaimer">Eshoshikhi.com সম্পূর্ণ অরাজনৈতিক এবং অলাভজনক একটি গ্রুপ। এটি কোনো দল, গোষ্ঠী বা সংগঠন, কারো সাথে যুক্ত না। কোন ধরনের মানসিক/শারীরিক হয়রানী, চাঁদাবাজি, ফ্রি-মিক্সিং, অশ্লীলতা, প্রতারণা, কপটতা, অপরাধ আমরা সমর্থন বা প্রচার করি না এবং কোন ব্যক্তি/ সংগঠন থেকে অর্থ সংগ্রহ করি না। আমাদের অফিশিয়াল পেইজ, ব্লগ ও অফিসিয়াল লিফলেটে নিজস্ব যে কন্টেন্ট (আর্টিকেল, ছবি, ভিডিও, অডিও, স্লাইড) আছে সেসবের প্রতি আমরা সম্পূর্ণ দায়বদ্ধ। এর বাইরে কেউ অফলাইন/ অনলাইনে আমাদের নাম ব্যবহার করে ভিন্ন কোন কন্টেন্ট প্রকাশ বা প্রচার করলে আমরা এর দায়ভার নিবো না। যে কোন ব্যক্তি/ সংগঠন চাইলে স্বেচ্ছায় কোনরূপ মডিফিকেশন ছাড়া আমাদের কন্টেন্টগুলো ব্যবহার করতে পারেন। এক্ষেত্রে তাদের কাজের দায়ভার আমাদের উপর বর্তাবে না। আমরা সশরীরে উপস্থিত হয়ে তাদের কাজ মনিটর করার সামর্থ্য রাখি না। আমাদের কন্টেন্টে কোরআন-সুন্নাহ-সীরাহ সর্বোপরি ইসলামের কথা প্রত্যক্ষ/ পরোক্ষ ভাবে আসে ও আসবে ইনশাআল্লাহ। এক্ষেত্রে সর্বদা অথেন্টিক সোর্স থেকে রেফারেন্স নেয়া হয়। কোন কন্টেন্ট নিয়ে কারো উদ্দেশ্যমূলকভাবে মিথ্যা রটনা কাম্য নয়। আমাদের কন্টেন্টের সাথে কোন নির্দিষ্ট ব্যক্তি বা দলের মিল খুঁজে পেলে তা একান্তই কাকতালীয়।</p>
+            </div>
+
+
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+
+                <div>
+                    <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" href="https://twitter.com/explore"><i class="fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/accounts/login/?"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="rights flex-row">
+                <h4 class="text-gray">
+                    Copyright ©2020 All rights reserved | developed by <a>Group Members</a>
+
+                </h4>
+            </div>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- Jquery Library file -->
+    <script src="../js/Jquery3.4.1.min.js"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="../js/owl.carousel.min.js"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="../js/aos.js"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

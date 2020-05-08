@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EshoShikhi</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../css/all.css">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="../css/Style.css">
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #all-quotes {
+            padding: 1rem;
+        }
+
+        #all-quotes p {
+            font-family: galada;
+            margin: 2rem;
+            word-spacing: 2px;
+            color: #2b2b2b
+        }
+
+        #all-quotes-name {
+            padding-left: 5rem;
+        }
+
+        #all-quotes h2 {
+            font-size: 3rem;
+            color: #104f55;
+            font-family: livvic;
+        }
+
+        #all-quotes-body {
+            font-size: 1.5rem;
+            font-weight: 50px;
+            text-align: left;
+        }
+
+        #all-quotes-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: blue;
+        }
+
+    </style>
+
+</head>
+
+<body onload="myLoad()">
+
+    <div class="preloader" id="loader">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </div>
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray">EshoShikhi<span class="small-text">.com</span></a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+
+                    <a href="../index.html">
+                        <li class="nav-link">
+                            <i class="fa fa-fw fa-home"></i> &nbsp; Home &nbsp;
+                        </li>
+                    </a>
+                    <a href="blog-type.html">
+                        <li class="nav-link">
+                            <i class="fas fa-book"></i>
+                            &nbsp; Blog &nbsp;
+                        </li>
+                    </a>
+                    <a href="quotes-type.html">
+                        <li class="nav-link root-link">
+                            <i class="fas fa-quote-right"></i>
+                            &nbsp; Quotes &nbsp;
+                        </li>
+                    </a>
+                    <a href="photo-type.html">
+                        <li class="nav-link">
+                            <i class="far fa-image"></i>
+                            &nbsp; Photos &nbsp;
+                        </li>
+                    </a>
+                    <a href="members-type.html">
+                        <li class="nav-link">
+                            <i class="fas fa-users"></i>&nbsp; Members
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a target="_blank" href="https://twitter.com/explore"><i class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://www.instagram.com/accounts/login/?"><i class="fab fa-instagram"></i></a>
+                <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+
+        </div>
+    </nav>
+    <hr style="margin-top:-1.2px;" />
+
+    <!--    <hr style="margin-top:-1.2px;" />-->
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+    <div class="quotes-head" data-aos="fade-up" data-aos-delay="300">
+        <div id="all-quotes">
+            <h1 style="text-align:center;color: var(--midnight)">All Quotes</h1>
+
+            <ul style="list-style-type: none;" id="bangla-quotes">
+                <h2>Bangla:</h2><br>
+                <li>
+                    <p id="all-quotes-body">“নেকড়ের পালের সাথে বসবাস করো, তুমি বিড়াল হলেও একদিন গর্জন করতে শিখবে”</p>
+                    <p id="all-quotes-name">– বিখ্যাত ড্যানিশ প্রবাদ</p>
+                </li>
+                <br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">“ বিখ্যাত না হয়ে জীবন কাটালেও সুন্দর জীবন কাটানো সম্ভব, কিন্তু জীবনের মত জীবন না কাটিয়ে বিখ্যাত হওয়া কখনও সুন্দর জীবন হতে পারে না”
+                    </p>
+                    <p id="all-quotes-name">– ক্লাইভ জেমস</p>
+                </li>
+                <br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">“জীবন হোক কর্মময়, নিরন্তর ছুটে চলা। চিরকাল বিশ্রাম নেয়ার জন্য তো কবর পড়েই আছে”
+                    </p>
+                    <p id="all-quotes-name">– হযরত আলী (রা)</p>
+                </li>
+                <br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">“সুযোগ যদি তোমার দরজায় কড়া না নাড়ে, তবে নতুন একটি দরজা বানাও”</p>
+                    <p id="all-quotes-name">– মিল্টন বার্লে</p>
+                </li>
+                <br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">“অন্ধরা দেখতে না পেলেও আলো আলোই থাকে, সে অন্ধকার হয়ে যায় না”</p>
+                    <p id="all-quotes-name"> – অস্ট্রিয়ান প্রবাদ</p>
+                </li>
+                <br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">
+                        “বিশ্বাস করলে এতটাই করো, যাতে সে ঠকাতেও লজ্জা পায়”</p>
+                    <p id="all-quotes-name">- সংকলিত</p>
+                <li>
+                    <p id="all-quotes-body">
+                        “যদি বুদ্ধি খরচ করতে না জানো, তবে টাকার থলি থেকে খরচ হবে”</p>
+                    <p id="all-quotes-name">- সংকলিত</p>
+                </li>
+                <br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">“সব ধরনের অনিশ্চয়তা, হতাশা আর বাধা সত্ত্বেও নিজের সবটুকু দিয়ে সফল হওয়ার চেষ্টাই শক্তিমান মানুষকে দুর্বলদের থেকে আলাদা করে”</p>
+                    <p id="all-quotes-name">- সংকলিত</p>
+                </li>
+                <br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">“আলো ছড়ানোর দু’টি উপায় আছে। এক – নিজে মোমবাতি হয়ে জ্বলো, দুই – আয়নার মত আলোকে প্রতিফলিত করো”</p>
+                    <p id="all-quotes-name">– এডিথ ওয়ারটন</p>
+                </li>
+                <br>
+                <hr><br>
+            </ul>
+            <ul style="list-style-type: none;
+    font-size: 1rem;" id="english-quotes">
+                <h2 style="margin-top: 1rem;">English:</h2><br>
+                <li>
+                    <p id="all-quotes-body">“I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.”</p>
+                    <p id="all-quotes-name">― Marilyn Monroe</p>
+                </li><br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">“You've gotta dance like there's nobody watching,
+                        Love like you'll never be hurt,
+                        Sing like there's nobody listening,
+                        And live like it's heaven on earth.”</p>
+                    <p id="all-quotes-name">― William W. Purkey</p>
+                </li><br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">“Don’t walk in front of me… I may not follow
+                        Don’t walk behind me… I may not lead
+                        Walk beside me… just be my friend”</p>
+                    <p id="all-quotes-name">― Albert Camus</p>
+                </li><br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">“I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.”</p>
+                    <p id="all-quotes-name"> ― Maya Angelou</p>
+                </li>
+                <br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">“Friendship ... is born at the moment when one man says to another "What! You too? I thought that no one but myself ”</p>
+                    <p id="all-quotes-name">― C.S. Lewis</p>
+                </li>
+                <br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">“We met for a reason, either you're a blessing or a lesson.”</p>
+                    <p id="all-quotes-name">― Collected</p>
+                </li>
+                <br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">“Allah will take care of you even when things look impossible.”</p>
+                    <p id="all-quotes-name">― Collected</p>
+                </li>
+                <br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">“Be the change that you wish to see in the world.”</p>
+                    <p id="all-quotes-name">― Mahatma Gandhi</p>
+                </li>
+                <br>
+                <hr><br>
+                <li>
+                    <p id="all-quotes-body">“Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.”</p>
+                    <p id="all-quotes-name">― Bernard M. Baruch </p>
+                </li>
+                <br>
+                <br>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <hr />
+    <p class="comment-footer" style="padding: 2rem;"> আপনার মূল্যবান মতামত অথবা উপদেশ জানাতে মেইল করুন: <span id="blue-text">mehedi7310@gmail.com</span></p>
+
+
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>ডিসক্লেইমার</h2>
+                <p class="footer-disclaimer">Eshoshikhi.com সম্পূর্ণ অরাজনৈতিক এবং অলাভজনক একটি গ্রুপ। এটি কোনো দল, গোষ্ঠী বা সংগঠন, কারো সাথে যুক্ত না। কোন ধরনের মানসিক/শারীরিক হয়রানী, চাঁদাবাজি, ফ্রি-মিক্সিং, অশ্লীলতা, প্রতারণা, কপটতা, অপরাধ আমরা সমর্থন বা প্রচার করি না এবং কোন ব্যক্তি/ সংগঠন থেকে অর্থ সংগ্রহ করি না। আমাদের অফিশিয়াল পেইজ, ব্লগ ও অফিসিয়াল লিফলেটে নিজস্ব যে কন্টেন্ট (আর্টিকেল, ছবি, ভিডিও, অডিও, স্লাইড) আছে সেসবের প্রতি আমরা সম্পূর্ণ দায়বদ্ধ। এর বাইরে কেউ অফলাইন/ অনলাইনে আমাদের নাম ব্যবহার করে ভিন্ন কোন কন্টেন্ট প্রকাশ বা প্রচার করলে আমরা এর দায়ভার নিবো না। যে কোন ব্যক্তি/ সংগঠন চাইলে স্বেচ্ছায় কোনরূপ মডিফিকেশন ছাড়া আমাদের কন্টেন্টগুলো ব্যবহার করতে পারেন। এক্ষেত্রে তাদের কাজের দায়ভার আমাদের উপর বর্তাবে না। আমরা সশরীরে উপস্থিত হয়ে তাদের কাজ মনিটর করার সামর্থ্য রাখি না। আমাদের কন্টেন্টে কোরআন-সুন্নাহ-সীরাহ সর্বোপরি ইসলামের কথা প্রত্যক্ষ/ পরোক্ষ ভাবে আসে ও আসবে ইনশাআল্লাহ। এক্ষেত্রে সর্বদা অথেন্টিক সোর্স থেকে রেফারেন্স নেয়া হয়। কোন কন্টেন্ট নিয়ে কারো উদ্দেশ্যমূলকভাবে মিথ্যা রটনা কাম্য নয়। আমাদের কন্টেন্টের সাথে কোন নির্দিষ্ট ব্যক্তি বা দলের মিল খুঁজে পেলে তা একান্তই কাকতালীয়।</p>
+            </div>
+
+
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+
+                <div>
+                    <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" href="https://twitter.com/explore"><i class="fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/accounts/login/?"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="rights flex-row">
+                <h4 class="text-gray">
+                    Copyright ©2020 All rights reserved | developed by <a href="members-type.html">Group Members</a>
+
+                </h4>
+            </div>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- Jquery Library file -->
+    <script src="../js/Jquery3.4.1.min.js"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="../js/owl.carousel.min.js"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="../js/aos.js"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
