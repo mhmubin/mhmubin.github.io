@@ -22,145 +22,121 @@
 
     <style>
         body {
-            font-family: Verdana, sans-serif;
             margin: 0;
+            padding: 0;
         }
 
-        * {
+        html {
             box-sizing: border-box;
         }
 
-        .row>.column {
-            padding: 8px 8px;
-        }
-
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
         }
 
         .column {
             float: left;
             width: 25%;
+            margin-bottom: 16px;
+            padding: 0 16px;
         }
 
-        /* The Modal (background) */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: black;
+        .main-body {
+            margin: 2rem;
         }
 
-        /* Modal Content */
-        .modal-content {
-            position: relative;
-            background-color: #fefefe;
-            margin: auto;
-            padding: 0;
-            width: 90%;
-            max-width: 1200px;
+
+
+        .contain {
+            text-align: left;
         }
 
-        /* The Close Button */
-        .close {
-            color: white;
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            font-size: 35px;
-            font-weight: bold;
+        .contain::after,
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
         }
 
-        .close:hover,
-        .close:focus {
-            color: #999;
-            text-decoration: none;
-            cursor: pointer;
+        .title {
+            color: grey;
         }
 
-        .mySlides {
-            display: none;
+
+
+
+
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
         }
 
-        .cursor {
-            cursor: pointer;
+        .caption-blue-text {
+            color: blue;
         }
 
-        /* Next & previous buttons */
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -50px;
-            color: white;
-            font-weight: bold;
+        .no-value {
+            font-size: 14px;
+            font-family: hind;
+        }
+
+        .blog-post-tag-tittle {
+            font-family: hind;
             font-size: 20px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            -webkit-user-select: none;
+            font-weight: bold;
+            color: #262626;
         }
 
-        /* Position the "next button" to the right */
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
+        .blog-post-tag-desc {
+            font-size: 16px;
         }
 
-        /* On hover, add a black background color with a little bit see-through */
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+        .blog-type-btn {
+            padding: .5rem;
+            background: var(--sky);
+            border: 1px;
+            font-family: livvic;
         }
 
-        /* Number text (1/3 etc) */
-        .numbertext {
-            color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
+        .blog-type-btn:hover {
+            cursor: pointer;
+            background: var(--skyH);
+
+        }
+
+        .container {
+            position: relative;
+            font-family: Arial;
+        }
+
+        .text-block {
             position: absolute;
-            top: 0;
-        }
-
-        img {
-            margin-bottom: -4px;
-        }
-
-        .caption-container {
-            text-align: center;
+            bottom: 10px;
+            right: 10px;
             background-color: black;
-            padding: 2px 16px;
             color: white;
+            padding: 10px;
         }
 
-        .demo {
-            opacity: 0.6;
+        .picture-overlay:hover {
+            color: forestgreen;
         }
 
-        .active,
-        .demo:hover {
-            opacity: 1;
+        .picture-overlay-caption {
+            font-size: 1.5rem;
+            font-family: lexand;
+            font-weight: bold;
+            color: deepskyblue;
         }
 
-        img.hover-shadow {
-            transition: 0.3s;
+        .picture-overlay-description {
+            font-family: livvic;
+            font-size: .7rem;
         }
-
-        .hover-shadow:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-
     </style>
 
 </head>
@@ -238,200 +214,862 @@
 
     <!-- ------------x---------------  Navigation --------------------------x------------------- -->
     <h1 style="text-align:center;color: var(--midnight)">All Photos</h1>
+    
+    
     <div class="row">
-        <div class="column">
-            <img src="../assets/Blog-post/pic-1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+
+    <div class="column">
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-1.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Ibrahimpur</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-1.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-1.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">Tamanna || Jan 18, 2020 || Dhaka </span>
+            </div>
+        </div>
         </div>
         <div class="column">
-            <img src="../assets/Blog-post/pic-2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-2.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">300 Feet</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-2.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-2.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">Mehedi || Jan 22, 2020 || Dhaka </span>
+            </div>
+        </div>
+        </div>
+        
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-3.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-3.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-3.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 </span>
+            </div>
+        </div>
+        
+        </div>
+          
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-4.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Railgate</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-4.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-4.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 || Dhaka </span>
+            </div>
+        </div>
+        
+        </div>
+        
+    </div>
+    
+     <div class="row">
+
+    <div class="column">
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-5.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Nirjhor</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-5.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-5.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">Taznim || May 9, 2019 || Dhaka  </span>
+            </div>
+        </div>
         </div>
         <div class="column">
-            <img src="../assets/Blog-post/pic-3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-6.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Cantonment</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-6.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-6.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">Rahat || Jan 22, 2020 || Dhaka </span>
+            </div>
+        </div>
+        </div>
+        
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-7.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Nirjhor</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-7.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-7.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 || Dhaka </span>
+            </div>
+        </div>
+        
+        </div>
+          
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-8.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Nirjhor</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-8.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-8.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 || Dhaka </span>
+            </div>
+        </div>
+        
+        </div>
+        
+    </div>
+    
+    
+    
+        <div class="row">
+
+    <div class="column">
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-9.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-9.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-9.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || June 22, 2020  </span>
+            </div>
+        </div>
         </div>
         <div class="column">
-            <img src="../assets/Blog-post/pic-4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-10.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Nirjhor</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-10.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-10.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 22, 2020 || Dhaka </span>
+            </div>
+        </div>
+        </div>
+        
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-11.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Museum</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-11.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-11.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">Fardin || April 9, 2019 || Sonargaon </span>
+            </div>
+        </div>
+        
+        </div>
+          
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-12.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Railgate</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-12.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-12.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">Tasfia || Jan 18, 2020 || Dhaka </span>
+            </div>
+        </div>
+        
+        </div>
+        
+    </div>
+    
+     <div class="row">
+
+    <div class="column">
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-13.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Bridge</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-13.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-13.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">Johurul || April 13, 2019 || Narayangonj  </span>
+            </div>
+        </div>
         </div>
         <div class="column">
-            <img src="../assets/Blog-post/pic-5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+        
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-14.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-14.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-14.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || april 19, 2020 </span>
+            </div>
         </div>
-        <div class="column">
-            <img src="../assets/Blog-post/pic-6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
         </div>
-        <div class="column">
-            <img src="../assets/Blog-post/pic-7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+        
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-15.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-15.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-15.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || april 19, 2020 </span>
+            </div>
         </div>
-        <div class="column">
-            <img src="../assets/Blog-post/pic-8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+        
         </div>
-        <div class="column">
-            <img src="../assets/Blog-post/pic-9.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+          
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-16.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-16.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-16.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || april 19, 2020 </span>
+            </div>
         </div>
-        <div class="column">
-            <img src="../assets/Blog-post/pic-10.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+        
         </div>
-        <div class="column">
-            <img src="../assets/Blog-post/pic-11.jpg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
-        </div>
-        <div class="column">
-            <img src="../assets/Blog-post/pic-12.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
-        </div>
+        
     </div>
 
-    <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
 
-            <div class="mySlides">
-                <div class="numbertext">1 / 12</div>
-                <img src="../assets/Blog-post/pic-1.jpg" style="width:100%">
-            </div>
+    <div class="row">
 
-            <div class="mySlides">
-                <div class="numbertext">2 / 12</div>
-                <img src="../assets/Blog-post/pic-2.jpg" style="width:100%">
-            </div>
+    <div class="column">
+        <div data-aos="flip-up" data-aos-delay="50">
 
-            <div class="mySlides">
-                <div class="numbertext">3 / 12</div>
-                <img src="../assets/Blog-post/pic-3.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">4 /12</div>
-                <img src="../assets/Blog-post/pic-4.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">5 / 12</div>
-                <img src="../assets/Blog-post/pic-5.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">6 / 12</div>
-                <img src="../assets/Blog-post/pic-6.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">7 / 12</div>
-                <img src="../assets/Blog-post/pic-7.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">8 /12</div>
-                <img src="../assets/Blog-post/pic-8.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">9 / 12</div>
-                <img src="../assets/Blog-post/pic-9.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">10 / 12</div>
-                <img src="../assets/Blog-post/pic-10.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">11 / 12</div>
-                <img src="../assets/Blog-post/pic-11.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">12 /12</div>
-                <img src="../assets/Blog-post/pic-12.jpg" style="width:100%">
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            <div class="caption-container">
-                <p id="caption"></p>
-            </div>
-
-
-            <div class="column">
-                <img class="demo cursor" src="../assets/Blog-post/pic-1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Ibrahimpur, Dhaka <br/> &#169;Tamanna Mim">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="../assets/Blog-post/pic-2.jpg" style="width:100%" onclick="currentSlide(2)" alt="300feet <br/>&#169;Mehedi Islam">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="../assets/Blog-post/pic-3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Sirajganj Sadar <br/>&#169;MH Mubin">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="../assets/Blog-post/pic-4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Kaola Railgate <br/>&#169;MH Mubin">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="../assets/Blog-post/pic-5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nirjhor Cantonment <br/>&#169;MH Mubin">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="../assets/Blog-post/pic-6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Dhaka Cantonment <br/>&#169;MH Mubin">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="../assets/Blog-post/pic-7.jpg" style="width:100%" onclick="currentSlide(7)" alt="Nirjhor Cantonment <br/>&#169;MH Mubin">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="../assets/Blog-post/pic-8.jpg" style="width:100%" onclick="currentSlide(8)" alt="Nirjhor Cantonment <br/>&#169;MH Mubin">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="../assets/Blog-post/pic-9.jpg" style="width:100%" onclick="currentSlide(9)" alt="Sirajganj Sadar <br/>&#169;MH Mubin">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="../assets/Blog-post/pic-10.jpg" style="width:100%" onclick="currentSlide(10)" alt="Nirjhor Cantonment <br/>&#169;MH Mubin">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="../assets/Blog-post/pic-11.jpg" style="width:100%" onclick="currentSlide(11)" alt="Narayanganj, Dhaka<br/>&#169;MH Mubin">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="../assets/Blog-post/pic-12.jpg" style="width:100%" onclick="currentSlide(12)" alt="Dhaka <br/>&#169;Tasmia Rahman">
+            <img src="../assets/Blog-post/pic-17.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-17.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-17.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || april 19, 2020  </span>
             </div>
         </div>
+        </div>
+        <div class="column">
+        
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-18.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-18.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-18.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || april 19, 2020 </span>
+            </div>
+        </div>
+        </div>
+        
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-19.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-19.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-19.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 </span>
+            </div>
+        </div>
+        
+        </div>
+          
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-20.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-20.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-20.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || april 19, 2020 </span>
+            </div>
+        </div>
+        
+        </div>
+        
+    </div>
+    
+     <div class="row">
+
+    <div class="column">
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-21.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-21.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-21.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || april 19, 2020  </span>
+            </div>
+        </div>
+        </div>
+        <div class="column">
+        
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-22.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-22.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-22.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || april 19, 2020 </span>
+            </div>
+        </div>
+        </div>
+        
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-23.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-23.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-23.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || april 19, 2020 </span>
+            </div>
+        </div>
+        
+        </div>
+          
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-24.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-24.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-24.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || april 19, 2020 </span>
+            </div>
+        </div>
+        
+        </div>
+        
+    </div>
+    
+    
+    
+        <div class="row">
+
+    <div class="column">
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-25.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-25.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-25.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">Tamanna || Jan 18, 2020  </span>
+            </div>
+        </div>
+        </div>
+        <div class="column">
+        
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-26.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-26.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-26.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || april 19, 2020 </span>
+            </div>
+        </div>
+        </div>
+        
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-27.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-27.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-27.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 </span>
+            </div>
+        </div>
+        
+        </div>
+          
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-28.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-28.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-28.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || May 25, 2020 </span>
+            </div>
+        </div>
+        
+        </div>
+        
+    </div>
+    
+     <div class="row">
+
+    <div class="column">
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-29.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-29.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-29.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || May 25, 2020  </span>
+            </div>
+        </div>
+        </div>
+        <div class="column">
+        
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-30.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-30.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-30.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || October 8, 2020 </span>
+            </div>
+        </div>
+        </div>
+        
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-31.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-31.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-31.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 || Dhaka </span>
+            </div>
+        </div>
+        
+        </div>
+          
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-32.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-32.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-32.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 || Dhaka </span>
+            </div>
+        </div>
+        
+        </div>
+        
     </div>
 
-    <script>
-        function openModal() {
-            document.getElementById("myModal").style.display = "block";
-        }
 
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
+    <div class="row">
 
-        var slideIndex = 1;
-        showSlides(slideIndex);
+    <div class="column">
+        <div data-aos="flip-up" data-aos-delay="50">
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+            <img src="../assets/Blog-post/pic-33.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-33.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-33.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">Tamanna || Jan 18, 2020  </span>
+            </div>
+        </div>
+        </div>
+        <div class="column">
+        
+        <div data-aos="flip-up" data-aos-delay="50">
 
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
+            <img src="../assets/Blog-post/pic-56.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Bus Stand</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-56.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-56.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">Mehedi || Jan 22, 2020 || Ullapara </span>
+            </div>
+        </div>
+        </div>
+        
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
 
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            captionText.innerHTML = dots[slideIndex - 1].alt;
-        }
+            <img src="../assets/Blog-post/pic-34.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-34.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-34.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 </span>
+            </div>
+        </div>
+        
+        </div>
+          
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
 
-    </script>
+            <img src="../assets/Blog-post/pic-35.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-35.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-35.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 || Dhaka </span>
+            </div>
+        </div>
+        
+        </div>
+        
+    </div>
+    
+     <div class="row">
+
+    <div class="column">
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-36.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-36.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-36.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">Taznim || May 9, 2019 || Dhaka  </span>
+            </div>
+        </div>
+        </div>
+        <div class="column">
+        
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-37.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Station</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-37.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-37.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 22, 2020 || Sirajgonj </span>
+            </div>
+        </div>
+        </div>
+        
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-38.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Jamuna</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-38.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-38.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 || Sirajgonj </span>
+            </div>
+        </div>
+        
+        </div>
+          
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-39.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Station</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-39.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-39.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 || Sirajgonj </span>
+            </div>
+        </div>
+        
+        </div>
+        
+    </div>
+    
+    
+    
+        <div class="row">
+
+    <div class="column">
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-40.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Jamuna</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-40.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-40.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">Tamanna || Jan 18, 2020 || Sirajgonj  </span>
+            </div>
+        </div>
+        </div>
+        <div class="column">
+        
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-41.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-41.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-41.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 22, 2020 </span>
+            </div>
+        </div>
+        </div>
+        
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-42.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Station</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-42.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-42.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 || Sirajgonj </span>
+            </div>
+        </div>
+        
+        </div>
+          
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-43.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-43.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-43.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 </span>
+            </div>
+        </div>
+        
+        </div>
+        
+    </div>
+    
+     <div class="row">
+
+    <div class="column">
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-44.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Jamuna</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-44.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-44.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || May 9, 2019 || Sirajgonj  </span>
+            </div>
+        </div>
+        </div>
+        <div class="column">
+        
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-45.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-45.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-45.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">Rahat || Jan 22, 2020 </span>
+            </div>
+        </div>
+        </div>
+        
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-46.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-46.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-46.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 </span>
+            </div>
+        </div>
+        
+        </div>
+          
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-47.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Jamuna</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-47.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-47.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 || Sirajgonj </span>
+            </div>
+        </div>
+        
+        </div>
+        
+    </div>
+
+
+    <div class="row">
+
+    <div class="column">
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-48.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-48.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-48.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020  </span>
+            </div>
+        </div>
+        </div>
+        <div class="column">
+        
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-49.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-49.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-49.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 22, 2020 </span>
+            </div>
+        </div>
+        </div>
+        
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-50.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-50.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-50.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 </span>
+            </div>
+        </div>
+        
+        </div>
+          
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-51.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-51.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-51.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 </span>
+            </div>
+        </div>
+        
+        </div>
+        
+    </div>
+    
+     <div class="row">
+
+    <div class="column">
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-52.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-52.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-52.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || May 9, 2019  </span>
+            </div>
+        </div>
+        </div>
+        <div class="column">
+        
+        <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-53.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-53.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-53.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">Rahat || Jan 22, 2020 </span>
+            </div>
+        </div>
+        </div>
+        
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-54.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-54.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-54.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 </span>
+            </div>
+        </div>
+        
+        </div>
+          
+       <div class="column"> <div data-aos="flip-up" data-aos-delay="50">
+
+            <img src="../assets/Blog-post/pic-55.jpg" alt="Nature" style="width:100%;">
+            <div class="text-block">
+                <span><span class="picture-overlay-caption">Sirajgonj</span> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-55.jpg" download><i class="fas fa-download"></i></a> &nbsp;
+                    <a class="picture-overlay" href="../assets/Blog-post/pic-55.jpg"><i class="fas fa-expand"></i></a>
+                </span> <br>
+                <span class="small-screen-content no-value picture-overlay-description">MH Mubin || Jan 18, 2020 </span>
+            </div>
+        </div>
+        
+        </div>
+        
+    </div>
+
+
+
 
     <hr />
-   <p class="comment-footer"> আপনার মূল্যবান মতামত জানাতে অথবা কোন কন্টেন্ট সংশোধন অথবা সংযোজন করতে আমাদেরকে মেইল করুন: <a href="mailto:mehedi7310@gmail.com"><span id="blue-text">mehedi7310@gmail.com</span></a></p>
+    <p class="comment-footer"> আপনার মূল্যবান মতামত জানাতে অথবা কোন কন্টেন্ট সংশোধন অথবা সংযোজন করতে আমাদেরকে মেইল করুন: <a href="mailto:mehedi7310@gmail.com"><span id="blue-text">mehedi7310@gmail.com</span></a></p>
 
 
 
@@ -441,7 +1079,7 @@
         <div class="container">
             <div class="about-us" data-aos="fade-right" data-aos-delay="200">
                 <h2>ডিসক্লেইমার</h2>
-                 <p class="footer-disclaimer">Eshoshikhi.com সম্পূর্ণ অরাজনৈতিক এবং অলাভজনক একটি গ্রুপ। এটি কোনো দল, গোষ্ঠী বা সংগঠন, কারো সাথে যুক্ত না। কোন ধরনের মানসিক/শারীরিক হয়রানী, চাঁদাবাজি, ফ্রি-মিক্সিং, অশ্লীলতা, প্রতারণা, কপটতা, অপরাধ আমরা সমর্থন বা প্রচার করি না এবং কোন ব্যক্তি/ সংগঠন থেকে অর্থ সংগ্রহ করি না। আমাদের অফিশিয়াল পেইজ, ব্লগ ও অফিসিয়াল লিফলেটে নিজস্ব যে কন্টেন্ট (আর্টিকেল, ছবি, ভিডিও, অডিও, স্লাইড) আছে সেসবের প্রতি আমরা সম্পূর্ণ দায়বদ্ধ। এর বাইরে কেউ অফলাইন/ অনলাইনে আমাদের নাম ব্যবহার করে ভিন্ন কোন কন্টেন্ট প্রকাশ বা প্রচার করলে আমরা এর দায়ভার নিবো না। যে কোন ব্যক্তি/ সংগঠন চাইলে স্বেচ্ছায় কোনরূপ মডিফিকেশন ছাড়া আমাদের কন্টেন্টগুলো ব্যবহার করতে পারেন। এক্ষেত্রে তাদের কাজের দায়ভার আমাদের উপর বর্তাবে না। আমরা সশরীরে উপস্থিত হয়ে তাদের কাজ মনিটর করার সামর্থ্য রাখি না। আমাদের কন্টেন্টে কোন প্রকার মিথ্যা বা ভুয়া তথ্য নেই। তাই কোন কন্টেন্ট নিয়ে কারো উদ্দেশ্যমূলকভাবে মিথ্যা রটনা কাম্য নয়। আমাদের কন্টেন্টের সাথে কোন নির্দিষ্ট ব্যক্তি বা দলের মিল খুঁজে পেলে তা একান্তই কাকতালীয়।</p>
+                <p class="footer-disclaimer">Eshoshikhi সম্পূর্ণ অরাজনৈতিক এবং অলাভজনক একটি গ্রুপ। এটি কোনো দল, গোষ্ঠী বা সংগঠন, কারো সাথে যুক্ত না। কোন ধরনের মানসিক/শারীরিক হয়রানী, চাঁদাবাজি, ফ্রি-মিক্সিং, অশ্লীলতা, প্রতারণা, কপটতা, অপরাধ আমরা সমর্থন বা প্রচার করি না এবং কোন ব্যক্তি/ সংগঠন থেকে অর্থ সংগ্রহ করি না। আমাদের অফিশিয়াল পেইজ, ব্লগ ও অফিসিয়াল লিফলেটে নিজস্ব যে কন্টেন্ট (আর্টিকেল, ছবি, ভিডিও, অডিও, স্লাইড) আছে সেসবের প্রতি আমরা সম্পূর্ণ দায়বদ্ধ। এর বাইরে কেউ অফলাইন/ অনলাইনে আমাদের নাম ব্যবহার করে ভিন্ন কোন কন্টেন্ট প্রকাশ বা প্রচার করলে আমরা এর দায়ভার নিবো না। যে কোন ব্যক্তি/ সংগঠন চাইলে স্বেচ্ছায় কোনরূপ মডিফিকেশন ছাড়া আমাদের কন্টেন্টগুলো ব্যবহার করতে পারেন। এক্ষেত্রে তাদের কাজের দায়ভার আমাদের উপর বর্তাবে না। আমরা সশরীরে উপস্থিত হয়ে তাদের কাজ মনিটর করার সামর্থ্য রাখি না। আমাদের কন্টেন্টে কোন প্রকার মিথ্যা বা ভুয়া তথ্য নেই। তাই কোন কন্টেন্ট নিয়ে কারো উদ্দেশ্যমূলকভাবে মিথ্যা রটনা কাম্য নয়। আমাদের কন্টেন্টের সাথে কোন নির্দিষ্ট ব্যক্তি বা দলের মিল খুঁজে পেলে তা একান্তই কাকতালীয়।</p>
             </div>
 
 
