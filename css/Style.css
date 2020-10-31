@@ -26,12 +26,7 @@ body {
     --Josefin: 'Josefin', cursive;
     --Lexend: 'Lexend', cursive;
     --Livvic: 'Livvic', cursive;
-
-
-
-
 }
-
 
 
 /* ---------------- Global Classes ---------------*/
@@ -121,125 +116,13 @@ p {
 /* ------x------- Global Classes -------x-------*/
 
 
-
-/*-------------------preloader ----------------------------*/
-
-
-.preloader ul {
-    position: absolute;
-    top: calc(50% - 40px);
-    left: calc(50% - 40px);
-    width: 80px;
-    height: 80px;
-    transform: rotate(45deg);
-    margin: 0px;
-    padding: 0px;
-    z-index: 999999;
-    position: fixed;
-}
-
-.preloader ul li {
-    list-style-type: none;
-    position: relative;
-    width: 40px;
-    height: 40px;
-    float: left;
-}
-
-.preloader ul li:before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background: #f00;
-    transform-origin: 100% 100%;
-    animation: animate 3.3s linear infinite;
-}
-
-@keyframes animate {
-
-    0% {
-        transform: perspective(200px) rotatex(-180deg);
-        opacity: 0;
-    }
-
-    10% {
-        transform: perspective(200px) rotatex(-180deg);
-        opacity: 0;
-    }
-
-    25% {
-        transform: perspective(200px) rotatex(0deg);
-        opacity: 1;
-    }
-
-    75% {
-        transform: perspective(200px) rotate(0deg);
-        opacity: 1;
-    }
-
-    90% {
-        transform: perspective(200px) rotatey(180deg);
-        opacity: 0;
-    }
-
-    100% {
-        transform: perspective(200px) rotatey(0deg);
-        opacity: 0;
-    }
-
-}
-
-
-.preloader ul li:nth-child(1) {
-    transform: rotate(0deg);
-}
-
-.preloader ul li:nth-child(1):before {
-    animation-delay: 0s;
-    background: #2980b9;
-}
-
-.preloader ul li:nth-child(2) {
-    transform: rotate(90deg);
-}
-
-.preloader ul li:nth-child(2):before {
-    animation-delay: 0.4s;
-    background: #e74cbc;
-}
-
-.preloader ul li:nth-child(3) {
-    transform: rotate(270deg);
-}
-
-.preloader ul li:nth-child(3):before {
-    animation-delay: 1.2s;
-    background: #f1c40f;
-}
-
-.preloader ul li:nth-child(4) {
-    transform: rotate(180deg);
-}
-
-.preloader ul li:nth-child(4):before {
-    animation-delay: .8s;
-    background: #2ecc71;
-}
-
-
-/*-----------x--------preloader ---------------x-------------*/
-
-
-/* -------------- navbar ----------------- */
+/* --------------- navbar ----------------- */
 
 .nav {
     background: white;
     padding: 0 2rem;
     height: 0rem;
-    min-height: 9vh;
+    min-height: 10vh;
     overflow: hidden;
     transition: height 1s ease-in-out;
 }
@@ -269,7 +152,7 @@ p {
 }
 
 .collapse {
-    height: 30rem;
+    height: 26.1rem;
 }
 
 
@@ -277,11 +160,6 @@ p {
 .nav .nav-items {
     display: flex;
     margin: 0;
-}
-
-.root-link {
-    background: var(--midnight);
-    color: white;
 }
 
 .nav .nav-items .nav-link {
@@ -337,24 +215,8 @@ p {
 /* ----------------- Main Content----------- */
 
 /* --------------- Site title ---------------- */
-
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
-    transition: .5s ease;
-}
-
-
-.card:hover:not(.root-blog) {
-    transform: scale(1.05);
-}
-
-
-
-
 main .site-title {
-    background: url('../assets/Background-image.jpg');
+    background: url('../assets/Background-image.png');
     background-size: cover;
     height: 110vh;
     display: flex;
@@ -365,16 +227,6 @@ main .site-title .site-background {
     padding-top: 10rem;
     text-align: center;
     color: var(--white);
-}
-
-.top-pic-tittle-bangla {
-    font-family: Atma;
-    font-size: 19px;
-    color: white;
-    background-color: rgba(22, 22, 22, .37);
-    width: 819px;
-    height: 150px;
-    padding: .5rem;
 }
 
 main .site-title h1,
@@ -400,7 +252,7 @@ main .site-title .btn:hover {
 /* --------------- Blog Carousel ------------ */
 
 main .blog {
-    background: white;
+    background: url('../assets/Abract01.png');
     background-repeat: no-repeat;
     background-position: right;
     height: 100vh;
@@ -412,21 +264,6 @@ main .blog .blog-post {
     padding-top: 6rem;
 }
 
-
-/*------------blog-main*--- -------*/
-
-
-.blog-post-heading {
-    margin-top: 1.5rem;
-}
-
-#blog-post-name {
-    font-size: 28px;
-    font-family: hind;
-    font-weight: bold;
-    color: #262626;
-}
-
 main .blog-post .blog-content {
     display: flex;
     flex-direction: column;
@@ -435,35 +272,6 @@ main .blog-post .blog-content {
     margin: 3rem 2rem;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
-
-.blog-small-screen-content {
-    font-size: 20px;
-    font-family: livvic;
-    color: rgba(22, 22, 22, .91);
-}
-
-#blog-post-describe {
-    font-family: baloo;
-    font-size: 100%;
-    color: rgba(22, 22, 22, 1);
-    padding: 0 0 10px;
-}
-
-.comment-footer {
-    padding: 1rem;
-    font-size: 20px;
-    font-family: hind;
-    font-weight: bold;
-    color: #262626;
-    text-align: center;
-}
-
-.comment-footer #blue-text {
-    color: blue;
-}
-
-/*--------x----blog-main*-----x-----*/
-
 
 main .blog-content .blog-title {
     padding: 2rem 0;
@@ -509,17 +317,7 @@ section .container .owl-nav {
     color: var(--white);
     border-radius: 1.5rem;
     float: right;
-    margin: 2rem;
-    font-weight: bold;
-    transition: all .3s ease;
 }
-
-.photo-btn:hover {
-    background: #d6d6d6;
-    color: var(--midnight);
-    font-weight: bold;
-}
-
 
 
 /* -------x------- Blog Carousel -----x------ */
@@ -536,54 +334,19 @@ main .post-content {
 
 }
 
-.post-title {
-    word-spacing: 2.5px;
-}
-
 main .site-content .post-content > .post-image,
 .post-title {
-    padding: .5rem 1rem;
+    padding: 1rem 2rem;
     position: relative;
 }
 
-#post-name {
-    font-family: Hind;
-    font-size: 22px;
-    color: #262626;
+.post-title a {
     font-weight: bold;
-}
-
-.small-screen-content {
-    font-family: livvic;
-    font-size: 20px;
-
-}
-
-.post-title .blue-text {
-    color: blue;
-    font-size: 20px;
-}
-
-.post-content-more-story {
-    box-shadow: 0px 12px 18px 6px rgba(0, 0, 0, 0.3);
-}
-
-.root-blog {
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-    cursor: text;
-}
-
-#post-describe {
-    font-family: baloo;
-    font-size: 16px;
-    color: #262626;
-    font-weight: bold;
-
 }
 
 main .site-content .post-content > .post-image .post-info {
     background: var(--sky);
-    padding: 1rem;
+    padding: .2rem;
     position: absolute;
     bottom: 0%;
     left: 20vw;
@@ -593,15 +356,6 @@ main .site-content .post-content > .post-image .post-info {
 .all-quotes-body {
     font-size: 1.5rem;
     padding: 1rem;
-}
-
-
-.english-quotes {
-    font-family: var(-lexand);
-}
-
-.bangla-quotes {
-    font-family: mina;
 }
 
 /*--------Hidden-Quotes----------*/
@@ -636,15 +390,13 @@ main .site-content .post-content > .post-image > div {
 
 main .site-content .post-content > .post-image .img {
     width: 100%;
-    transition: all .5s ease;
+    transition: all 1s ease;
 }
 
 
-/*
 main .site-content .post-content > .post-image .img:hover {
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
-*/
 
 main .site-content .post-content > .post-image .post-info span {
     margin: 0 .5rem;
@@ -692,6 +444,7 @@ main .post-content .post-title a {
 }
 
 .site-content .sidebar .popular-post h2 {
+    padding-top: 8rem;
     color: var(--midnight);
 }
 
@@ -720,9 +473,6 @@ main .post-content .post-title a {
     margin: .4rem .6rem;
 }
 
-.sidebar {
-    padding: 1.5rem;
-}
 
 /* -------x------- Sidebar -----------x----------- */
 
@@ -752,12 +502,7 @@ footer.footer .container h2 {
     color: var(--white);
 }
 
-.footer-disclaimer {
-    font-size: 18px;
-    word-spacing: 2.5px;
-    font-family: baloo;
-    color: #c1c1c1;
-}
+
 
 
 
@@ -794,7 +539,6 @@ footer.footer .move-up span:hover {
 
 /*              Viewport less then or equal to 1130px            */
 
-
 @media only screen and (max-width: 1130px) {
     .site-content .post-content > .post-image .post-info {
         left: 2rem !important;
@@ -802,15 +546,12 @@ footer.footer .move-up span:hover {
         border-radius: 0% !important;
     }
 
+    .site-content .sidebar .popular-post .post-info {
+        display: initial !important;
+    }
 
     footer.footer .container {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-
-    #all-quotes {
-        padding: 5rem;
-        ;
     }
 
 }
@@ -827,19 +568,8 @@ footer.footer .move-up span:hover {
         flex-direction: column;
     }
 
-    .top-pic-tittle-bangla {
-        font-size: 12px;
-        height: 187PX;
-        width: 270PX;
-
-    }
-
-    .footer-disclaimer {
-        font-size: 14px;
-    }
-
-
-    .nav .toggle-collapse {
+    .nav .toggle-collapse,
+    .marquee {
         display: initial;
     }
 
@@ -851,22 +581,6 @@ footer.footer .move-up span:hover {
     footer.footer .container {
         grid-template-columns: repeat(1, 1fr);
     }
-
-    .site-content .post-content > .post-image .post-info {
-        display: none;
-
-    }
-
-    footer.footer .move-up {
-        bottom: 20%;
-    }
-
-    footer.footer .rights {
-
-        overflow: hidden;
-        margin-bottom: 2.5rem;
-    }
-
 
 }
 
@@ -882,21 +596,26 @@ footer.footer .move-up span:hover {
     }
 
     .site-content .post-content > .post-image .post-info {
-        display: none;
+        display: initial;
 
     }
 
-    initial footer.footer .container > div {
+    nitial footer.footer .container > div {
         padding: 1rem .9rem !important;
+    }
+
+    footer .rights {
+        padding: 0 1.4rem;
+        text-align: center;
     }
 
     nav .toggle-collapse {
         width: 80% !important;
     }
 
-    #all-quotes {
-        padding: initial;
-    }
 }
+
+
+
 
 /*        x      Viewport less then or equal to 520px       x     */
